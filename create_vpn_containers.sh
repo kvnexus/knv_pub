@@ -1,7 +1,7 @@
 #!/bin/bash
 
 read -p "Number of VPN containers to create: " amount 
-for ((i = 1; i <= $amount; i++)); do
+for ((i=1; i<=$amount; i++)); do
     docker run -dit \
     --name=awg$i \
     --privileged \
