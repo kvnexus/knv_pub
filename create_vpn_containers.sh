@@ -6,6 +6,7 @@ for ((i=1; i<=$amount; i++)); do
     --name=awg$i \
     --privileged \
     -v /etc/amnezia/amneziawg/multi_$i/:/config \
+    --storage-opt size=2G
     --device=/dev/net/tun:/dev/net/tun \
     --sysctl="net.ipv4.conf.all.src_valid_mark=1" \
     --sysctl="net.ipv4.ip_forward=1" \
