@@ -1,0 +1,4 @@
+#!/bin/bash
+for (( let i=1; i<=21; i++ )); do
+  docker run -it --privileged --name app$i --network container:awg$i -v $HOME/beacon-docker-compose:$HOME/beacon-docker-compose -d docker:dind
+done
