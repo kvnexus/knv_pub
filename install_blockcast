@@ -1,4 +1,4 @@
 #!/bin/bash
 for (( i=1; i<=21; i++ )); do
-  docker run -dit --privileged --name app$i --network container:awg$i blockcast:latest ./blockcast.sh
+  docker run -dit --privileged --name app$i --network container:awg$i blockcast:latest
 done
